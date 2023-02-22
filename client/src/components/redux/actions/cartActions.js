@@ -7,7 +7,7 @@ const URl = 'https://flipkartshoppingclone.onrender.com';
 
 export const addToCart = (id,quantity) => async(dispatch) => {
     try{
-           const { data } = await axios.get(`${URl}/api/product/${id}`) ;
+           const { data } = await axios.get(`/api/product/${id}`) ;
 
            dispatch({type:actionType.ADD_TO_CART, payload:{...data,quantity}});
     }catch(err){
